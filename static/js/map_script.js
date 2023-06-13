@@ -32,7 +32,7 @@ const Model = {
         contentType: false,
         success: function (response) {
           layer.bindPopup(
-            "<h6>Date: From" +
+            "<h6>Date: from " +
             selectedStartDate + " To " + selectedEndDate +
             "</h6>" +
             "<p>Mean Value: " +
@@ -136,7 +136,7 @@ const Model = {
 // View
 const View = {
   visualizeGeotiff(geotiffPath, map, min, max,product) {
-  if(product="lst"){
+  if(product=="lst"){
     L.leafletGeotiff(geotiffPath, {
       band: 0,
       name: "geotiff",
@@ -150,7 +150,6 @@ const View = {
         opacity: 0.2,
       }),
     }).addTo(map);
-
   }else{
     L.leafletGeotiff(geotiffPath, {
       band: 0,
